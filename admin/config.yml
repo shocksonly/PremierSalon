@@ -2,68 +2,72 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "PremierSalon/images"
+media_folder: "images"
 public_folder: "/images"
 
 collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - file: "PremierSalon/content/site.json"
+      - file: "content/site.json"
         label: "Logo & Global Buttons"
         name: "site"
         fields:
-          - { label: "Logo", name: "logo", widget: "image" }
-          - { label: "\"Book Now\" button text (used in the header on every page)", name: "bookButtonLabel", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", hint: "Square or round logo works best. Shows in the header on every page." }
+          - { label: "\"Book Now\" button text", name: "bookButtonLabel", widget: "string", hint: "Used in the header on every page." }
 
-      - file: "PremierSalon/content/home.json"
+      - file: "content/home.json"
         label: "Home Page"
         name: "home"
         fields:
-          - { label: "Hero Photo", name: "heroPhoto", widget: "image" }
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Photo", name: "heroPhoto", widget: "image", hint: "The big photo at the top of the home page. Tall photos (portrait) work best." }
+          - { label: "Hero Title", name: "heroTitle", widget: "string", hint: "The big headline over the hero photo. Keep it short." }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text", hint: "A sentence or two under the headline." }
           - { label: "Hero primary button text", name: "heroPrimaryLabel", widget: "string" }
           - { label: "Hero secondary button text", name: "heroSecondaryLabel", widget: "string" }
           - { label: "Product/Shop Photo (below reviews)", name: "shelfPhoto", widget: "image" }
-          - { label: "Specialty Line (shown on Home, About, Services)", name: "specialtyLine", widget: "string" }
+          - { label: "Specialty Line", name: "specialtyLine", widget: "string", hint: "Shown on the Home, About, and Services pages." }
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
+            summary: "{{fields.who}}"
+            collapsed: true
             fields:
               - { label: "Quote", name: "quote", widget: "text" }
               - { label: "Client Name", name: "who", widget: "string" }
 
-      - file: "PremierSalon/content/contact.json"
+      - file: "content/contact.json"
         label: "Contact & Hours"
         name: "contact"
         fields:
           - { label: "Address", name: "address", widget: "string" }
-          - { label: "Phone (display, e.g. (913) 555-0142)", name: "phone", widget: "string" }
-          - { label: "Phone (dial format, e.g. +19135550142)", name: "phoneTel", widget: "string" }
+          - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
+          - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
-          - { label: "Weekend Note (short, e.g. 'Varies by stylist')", name: "weekendNote", widget: "string" }
-          - { label: "Weekend Detail (full sentence)", name: "weekendDetail", widget: "text" }
+          - { label: "Weekend Note", name: "weekendNote", widget: "string", hint: "Short version, e.g. 'Varies by stylist'" }
+          - { label: "Weekend Detail", name: "weekendDetail", widget: "text", hint: "Full sentence with more detail." }
 
-      - file: "PremierSalon/content/about.json"
+      - file: "content/about.json"
         label: "About Page"
         name: "about"
         fields:
-          - { label: "Subheading (under the page title)", name: "intro", widget: "string" }
+          - { label: "Subheading", name: "intro", widget: "string", hint: "Appears under the page title." }
           - { label: "First paragraph", name: "paragraph1", widget: "text" }
           - { label: "Second paragraph", name: "paragraph2", widget: "text" }
-          - { label: "Closing paragraph (include the words 'team page' where you want that link to appear)", name: "closing", widget: "text" }
+          - { label: "Closing paragraph", name: "closing", widget: "text", hint: "Include the words 'team page' where you want that link to appear." }
 
-      - file: "PremierSalon/content/services.json"
+      - file: "content/services.json"
         label: "Services Page"
         name: "services"
         fields:
-          - { label: "Pricing note (under the page title)", name: "pricingIntro", widget: "string" }
+          - { label: "Pricing note", name: "pricingIntro", widget: "string", hint: "Appears under the page title." }
           - { label: "Men's category title", name: "mensTitle", widget: "string" }
           - label: "Men's services"
             name: "mensServices"
             widget: "list"
+            summary: "{{fields.name}}"
+            collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
               - { label: "Description (optional)", name: "desc", widget: "string", required: false }
@@ -71,39 +75,42 @@ collections:
           - label: "Women's services"
             name: "womensServices"
             widget: "list"
+            summary: "{{fields.name}}"
+            collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
               - { label: "Description (optional)", name: "desc", widget: "string", required: false }
-          - { label: "Footer note (include the words 'team page' where you want that link to appear)", name: "footerNote", widget: "string" }
+          - { label: "Footer note", name: "footerNote", widget: "string", hint: "Include the words 'team page' where you want that link to appear." }
 
-      - file: "PremierSalon/content/theme.json"
+      - file: "content/theme.json"
         label: "Colors & Theme"
         name: "theme"
         fields:
-          - { label: "Accent Color (buttons, links, highlights)", name: "accentColor", widget: "color" }
-          - { label: "Dark Section Background (header, hero, footer, hours band)", name: "darkBackground", widget: "color" }
-          - { label: "Page Background (light sections)", name: "lightBackground", widget: "color" }
-          - { label: "Body Text Color (main text on light sections)", name: "textColor", widget: "color" }
-          - { label: "Muted Text Color (descriptions, secondary details, hours labels — on light sections)", name: "secondaryTextColor", widget: "color" }
-          - { label: "Text on Dark Sections (headings and body text over the dark header/hero/footer/hours band, e.g. 'Varies by stylist')", name: "lightSectionTextColor", widget: "color" }
+          - { label: "Accent Color", name: "accentColor", widget: "color", hint: "Buttons, links, and highlights throughout the site." }
+          - { label: "Dark Section Background", name: "darkBackground", widget: "color", hint: "Header, hero banner, footer, and the hours band." }
+          - { label: "Page Background", name: "lightBackground", widget: "color", hint: "The main background on light sections." }
+          - { label: "Body Text Color", name: "textColor", widget: "color", hint: "Main text color on light sections." }
+          - { label: "Muted Text Color", name: "secondaryTextColor", widget: "color", hint: "Descriptions, secondary details, and hours labels on light sections." }
+          - { label: "Text on Dark Sections", name: "lightSectionTextColor", widget: "color", hint: "Headings and body text over the dark header, hero, footer, and hours band." }
 
   - name: "gallery"
     label: "Gallery"
     files:
-      - file: "PremierSalon/content/gallery.json"
+      - file: "content/gallery.json"
         label: "Gallery Photos"
         name: "gallery"
         fields:
-          - label: "Photos (drag to reorder, add or remove as needed)"
+          - label: "Photos"
             name: "photos"
             widget: "list"
+            hint: "Drag the handle on the left of each photo to reorder. Add or remove as needed."
             fields:
               - { label: "Photo", name: "image", widget: "image" }
 
   - name: "team"
     label: "Team"
     files:
-      - file: "PremierSalon/content/team.json"
+      - file: "content/team.json"
         label: "Stylists"
         name: "team"
         fields:
@@ -112,19 +119,22 @@ collections:
             name: "stylists"
             widget: "list"
             summary: "{{name}} — {{role}}"
+            collapsed: true
             fields:
-              - { label: "URL Slug (no spaces, e.g. john-smith)", name: "slug", widget: "string" }
+              - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces — use lowercase letters and hyphens only, e.g. john-smith. This becomes part of the web address for this person's page." }
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string", default: "Stylist" }
               - { label: "Specialty", name: "specialty", widget: "string" }
-              - { label: "Phone (display)", name: "phone", widget: "string" }
-              - { label: "Phone (dial format)", name: "phoneTel", widget: "string" }
+              - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
+              - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
               - { label: "Bio", name: "bio", widget: "text" }
               - { label: "Photo", name: "photo", widget: "image", required: false }
-              - label: "Links (booking calendar, Instagram, etc.)"
+              - label: "Links"
                 name: "links"
                 widget: "list"
                 required: false
+                summary: "{{fields.label}}"
+                hint: "Booking calendar, Instagram, etc."
                 fields:
-                  - { label: "Label (e.g. 'Book with me', 'Instagram')", name: "label", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", hint: "e.g. 'Book with me', 'Instagram'" }
                   - { label: "URL", name: "url", widget: "string" }

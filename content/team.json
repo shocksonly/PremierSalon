@@ -1,0 +1,65 @@
+{
+  "stylists": [
+    {
+      "slug": "owner",
+      "name": "Name here",
+      "role": "Owner & Stylist",
+      "specialty": "Specializes in \u2014 fades, color, and classic cuts",
+      "phone": "(913) 555-0142",
+      "phoneTel": "+19135550142",
+      "bio": "Bio goes here \u2014 background, how long they've been cutting hair, and what clients can expect in the chair.",
+      "photo": "",
+      "links": [
+        {
+          "label": "Book with me",
+          "url": "#"
+        },
+        {
+          "label": "Instagram",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "slug": "stylist-2",
+      "name": "Name here",
+      "role": "Stylist",
+      "specialty": "Specializes in \u2014 add their specialty here",
+      "phone": "(913) 555-0000",
+      "phoneTel": "+19135550000",
+      "bio": "Bio goes here \u2014 background, how long they've been cutting hair, and what clients can expect in the chair.",
+      "photo": "",
+      "links": [
+        {
+          "label": "Book with me",
+          "url": "#"
+        },
+        {
+          "label": "Instagram",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "slug": "stylist-3",
+      "name": "Name here",
+      "role": "Stylist",
+      "specialty": "Specializes in \u2014 add their specialty here",
+      "phone": "(913) 555-0000",
+      "phoneTel": "+19135550000",
+      "bio": "Bio goes here \u2014 background, how long they've been cutting hair, and what clients can expect in the chair.",
+      "photo": "",
+      "links": [
+        {
+          "label": "Book with me",
+          "url": "#"
+        },
+        {
+          "label": "Instagram",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "intro": "Everyone at Premier Salon books their own clients directly \u2014 reach out to whoever you'd like to sit with."
+}

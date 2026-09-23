@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — Premier Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark"><img data-bind="logo-src" data-prefix="" src="images/logo.png" alt="Premier Salon logo"></div>
+      <div class="brand-name">Premier <span>Salon</span></div>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Our Team</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="team.html"><span data-bind="book-btn-label">Book Now</span></a>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    <a class="book-now-link" href="team.html"><span data-bind="book-btn-label">Book Now</span></a>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="services.html">Services</a>
+    <a href="team.html">Our Team</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <p class="kicker">About us</p>
+  <h1>Built on repeat clients, not walk-in traffic</h1>
+  <p data-bind="about-intro">The story behind Premier Salon and what you can expect in the chair.</p>
+</div>
+
+<section>
+  <div class="section-inner about-body">
+    <p data-bind="about-paragraph-1">Premier Salon has built its name the old way — one good cut at a time, and a lot of people coming back. We keep the shop small on purpose, so every client gets full attention, not a rushed ten minutes between appointments.</p>
+    <p data-bind="about-paragraph-2">If you're new to Bonner Springs or just haven't found your regular spot yet, come sit down. We'll figure out what works for you.</p>
+    <div class="specialty-callout">
+      <p id="about-specialty-line">Specializing in professional men's fades and women's cuts &amp; color.</p>
+    </div>
+    <p data-bind="about-closing">Every stylist at Premier Salon runs their own book and brings their own focus to the chair — see the <a href="team.html" style="color:var(--gold); text-decoration:underline;">team page</a> for who specializes in what.</p>
+  </div>
+</section>
+<footer>
+  <p class="foot-contact">
+    <span data-bind="address">123 Oak Street, Bonner Springs, KS 66012</span> &middot;
+    <a data-bind="phone-href" href="tel:+19135550142"><span data-bind="phone-text">(913) 555-0142</span></a> &middot;
+    <a data-bind="email-href" href="mailto:hello@premiersalonks.com"><span data-bind="email-text">hello@premiersalonks.com</span></a>
+  </p>
+  © 2026 Premier Salon · Bonner Springs, Kansas
+</footer>
+<script>
+if (window.location.hash && /access_token|invite_token|recovery_token/.test(window.location.hash)) {
+  window.location.href = "admin/" + window.location.hash;
+}
+window.__SITE_PREFIX__ = "";
+</script>
+<script src="js/render.js"></script>
+</body>
+</html>

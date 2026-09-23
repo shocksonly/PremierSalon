@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stylist Profile — Premier Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="../index.html">
+      <div class="brand-mark"><img data-bind="logo-src" data-prefix="../" src="../images/logo.png" alt="Premier Salon logo"></div>
+      <div class="brand-name">Premier <span>Salon</span></div>
+    </a>
+    <nav class="links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../services.html">Services</a>
+      <a href="../team.html" class="active">Our Team</a>
+      <a href="../gallery.html">Gallery</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="../team.html"><span data-bind="book-btn-label">Book Now</span></a>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    <a class="book-now-link" href="../team.html"><span data-bind="book-btn-label">Book Now</span></a>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../services.html">Services</a>
+    <a href="../team.html" class="active">Our Team</a>
+    <a href="../gallery.html">Gallery</a>
+  </nav>
+</header>
+
+<section>
+  <div class="section-inner" id="profile-root">
+    <a class="back-link" href="../team.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"></path></svg> Back to team</a>
+    <div class="profile-hero">
+      <div class="profile-photo-wrap">
+        <div class="profile-photo placeholder" id="profile-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div>
+      </div>
+      <div class="profile-info">
+        <p class="role" id="profile-role">Stylist</p>
+        <h1 id="profile-name">Loading…</h1>
+        <p class="specialty" id="profile-specialty"></p>
+        <p class="bio" id="profile-bio"></p>
+        <div class="link-pills">
+          <a class="link-pill primary" id="profile-phone" href="tel:">Call</a>
+          <span id="profile-links"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p class="foot-contact">
+    <span data-bind="address">123 Oak Street, Bonner Springs, KS 66012</span> &middot;
+    <a data-bind="phone-href" href="tel:+19135550142"><span data-bind="phone-text">(913) 555-0142</span></a> &middot;
+    <a data-bind="email-href" href="mailto:hello@premiersalonks.com"><span data-bind="email-text">hello@premiersalonks.com</span></a>
+  </p>
+  © 2026 Premier Salon · Bonner Springs, Kansas
+</footer>
+<script>
+if (window.location.hash && /access_token|invite_token|recovery_token/.test(window.location.hash)) {
+  window.location.href = "../admin/" + window.location.hash;
+}
+window.__SITE_PREFIX__ = "../";
+</script>
+<script src="../js/render.js"></script>
+</body>
+</html>

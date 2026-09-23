@@ -1,0 +1,19 @@
+{
+  "pricingIntro": "Pricing is set by each stylist — contact them directly for exact rates.",
+  "mensTitle": "Men's",
+  "mensServices": [
+    { "name": "Fades", "desc": "Skin, taper, or classic — clipper work done clean" },
+    { "name": "Classic haircuts", "desc": "" },
+    { "name": "Beard trims & line-ups", "desc": "" },
+    { "name": "Hot towel shaves", "desc": "" },
+    { "name": "Kids' cuts", "desc": "" }
+  ],
+  "womensTitle": "Women's",
+  "womensServices": [
+    { "name": "Cuts & styling", "desc": "" },
+    { "name": "Color", "desc": "Full color, root touch-ups, highlights" },
+    { "name": "Blowouts", "desc": "" },
+    { "name": "Treatments & consultations", "desc": "" }
+  ],
+  "footerNote": "Exact pricing varies by stylist — see the team page to reach out directly."
+}

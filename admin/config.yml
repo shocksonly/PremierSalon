@@ -1,0 +1,130 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "PremierSalon/images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "PremierSalon/content/site.json"
+        label: "Logo & Global Buttons"
+        name: "site"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "\"Book Now\" button text (used in the header on every page)", name: "bookButtonLabel", widget: "string" }
+
+      - file: "PremierSalon/content/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Hero Photo", name: "heroPhoto", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero primary button text", name: "heroPrimaryLabel", widget: "string" }
+          - { label: "Hero secondary button text", name: "heroSecondaryLabel", widget: "string" }
+          - { label: "Product/Shop Photo (below reviews)", name: "shelfPhoto", widget: "image" }
+          - { label: "Specialty Line (shown on Home, About, Services)", name: "specialtyLine", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Client Name", name: "who", widget: "string" }
+
+      - file: "PremierSalon/content/contact.json"
+        label: "Contact & Hours"
+        name: "contact"
+        fields:
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Phone (display, e.g. (913) 555-0142)", name: "phone", widget: "string" }
+          - { label: "Phone (dial format, e.g. +19135550142)", name: "phoneTel", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
+          - { label: "Weekend Note (short, e.g. 'Varies by stylist')", name: "weekendNote", widget: "string" }
+          - { label: "Weekend Detail (full sentence)", name: "weekendDetail", widget: "text" }
+
+      - file: "PremierSalon/content/about.json"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Subheading (under the page title)", name: "intro", widget: "string" }
+          - { label: "First paragraph", name: "paragraph1", widget: "text" }
+          - { label: "Second paragraph", name: "paragraph2", widget: "text" }
+          - { label: "Closing paragraph (include the words 'team page' where you want that link to appear)", name: "closing", widget: "text" }
+
+      - file: "PremierSalon/content/services.json"
+        label: "Services Page"
+        name: "services"
+        fields:
+          - { label: "Pricing note (under the page title)", name: "pricingIntro", widget: "string" }
+          - { label: "Men's category title", name: "mensTitle", widget: "string" }
+          - label: "Men's services"
+            name: "mensServices"
+            widget: "list"
+            fields:
+              - { label: "Service name", name: "name", widget: "string" }
+              - { label: "Description (optional)", name: "desc", widget: "string", required: false }
+          - { label: "Women's category title", name: "womensTitle", widget: "string" }
+          - label: "Women's services"
+            name: "womensServices"
+            widget: "list"
+            fields:
+              - { label: "Service name", name: "name", widget: "string" }
+              - { label: "Description (optional)", name: "desc", widget: "string", required: false }
+          - { label: "Footer note (include the words 'team page' where you want that link to appear)", name: "footerNote", widget: "string" }
+
+      - file: "PremierSalon/content/theme.json"
+        label: "Colors & Theme"
+        name: "theme"
+        fields:
+          - { label: "Accent Color (buttons, links, highlights)", name: "accentColor", widget: "color" }
+          - { label: "Dark Section Background (header, hero, footer, hours band)", name: "darkBackground", widget: "color" }
+          - { label: "Page Background (light sections)", name: "lightBackground", widget: "color" }
+          - { label: "Body Text Color (main text on light sections)", name: "textColor", widget: "color" }
+          - { label: "Muted Text Color (descriptions, secondary details, hours labels — on light sections)", name: "secondaryTextColor", widget: "color" }
+          - { label: "Text on Dark Sections (headings and body text over the dark header/hero/footer/hours band, e.g. 'Varies by stylist')", name: "lightSectionTextColor", widget: "color" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "PremierSalon/content/gallery.json"
+        label: "Gallery Photos"
+        name: "gallery"
+        fields:
+          - label: "Photos (drag to reorder, add or remove as needed)"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+
+  - name: "team"
+    label: "Team"
+    files:
+      - file: "PremierSalon/content/team.json"
+        label: "Stylists"
+        name: "team"
+        fields:
+          - { label: "Team page intro text", name: "intro", widget: "string" }
+          - label: "Stylists"
+            name: "stylists"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "URL Slug (no spaces, e.g. john-smith)", name: "slug", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string", default: "Stylist" }
+              - { label: "Specialty", name: "specialty", widget: "string" }
+              - { label: "Phone (display)", name: "phone", widget: "string" }
+              - { label: "Phone (dial format)", name: "phoneTel", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - label: "Links (booking calendar, Instagram, etc.)"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label (e.g. 'Book with me', 'Instagram')", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }

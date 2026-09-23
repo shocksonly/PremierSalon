@@ -15,13 +15,13 @@
       "links": [
         {
           "label": "Book with me",
-          "labelColor": "#ffffff",
-          "url": "#"
+          "labelColor": "#d21f1f",
+          "url": "https://calendly.com/runkaidan/30min?month=2026-09"
         },
         {
           "label": "Instagram",
-          "labelColor": "#ffffff",
-          "url": "#"
+          "labelColor": "#18c36a",
+          "url": "#https://www.instagram.com/aidan_runk?stkn=ZG5uMDBpMnpjZ3Bz&utm_source=qr"
         }
       ],
       "bioColor": "#ffffff",

@@ -105,7 +105,7 @@ collections:
             widget: "list"
             hint: "Drag the handle on the left of each photo to reorder. Add or remove as needed."
             fields:
-              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo", name: "image", widget: "image", media_folder: "/images/gallery", public_folder: "/images/gallery" }
 
   - name: "team"
     label: "Team"

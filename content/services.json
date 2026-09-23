@@ -2,18 +2,54 @@
   "pricingIntro": "Pricing is set by each stylist — contact them directly for exact rates.",
   "mensTitle": "Men's",
   "mensServices": [
-    { "name": "Fades", "desc": "Skin, taper, or classic — clipper work done clean" },
-    { "name": "Classic haircuts", "desc": "" },
-    { "name": "Beard trims & line-ups", "desc": "" },
-    { "name": "Hot towel shaves", "desc": "" },
-    { "name": "Kids' cuts", "desc": "" }
+    {
+      "name": "Fades",
+      "desc": "Skin, taper, or classic — clipper work done clean",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Classic haircuts",
+      "desc": "",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Beard trims & line-ups",
+      "desc": "",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Hot towel shaves",
+      "desc": "",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Kids' cuts",
+      "desc": "",
+      "nameColor": "#ffffff"
+    }
   ],
   "womensTitle": "Women's",
   "womensServices": [
-    { "name": "Cuts & styling", "desc": "" },
-    { "name": "Color", "desc": "Full color, root touch-ups, highlights" },
-    { "name": "Blowouts", "desc": "" },
-    { "name": "Treatments & consultations", "desc": "" }
+    {
+      "name": "Cuts & styling",
+      "desc": "",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Color",
+      "desc": "Full color, root touch-ups, highlights",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Blowouts",
+      "desc": "",
+      "nameColor": "#ffffff"
+    },
+    {
+      "name": "Treatments & consultations",
+      "desc": "",
+      "nameColor": "#ffffff"
+    }
   ],
   "footerNote": "Exact pricing varies by stylist — see the team page to reach out directly."
 }

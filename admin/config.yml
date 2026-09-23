@@ -15,6 +15,7 @@ collections:
         fields:
           - { label: "Logo", name: "logo", widget: "image", hint: "Square or round logo works best. Shows in the header on every page." }
           - { label: "\"Book Now\" button text", name: "bookButtonLabel", widget: "string", hint: "Used in the header on every page." }
+          - { label: "\"Book Now\" Button Text Color", name: "bookButtonLabelColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
 
       - file: "content/home.json"
         label: "Home Page"
@@ -29,6 +30,7 @@ collections:
           - { label: "Hero secondary button text", name: "heroSecondaryLabel", widget: "string" }
           - { label: "Product/Shop Photo (below reviews)", name: "shelfPhoto", widget: "image" }
           - { label: "Specialty Line", name: "specialtyLine", widget: "string", hint: "Shown on the Home, About, and Services pages." }
+          - { label: "Specialty Line Color", name: "specialtyLineColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
@@ -36,19 +38,27 @@ collections:
             collapsed: true
             fields:
               - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Quote Color", name: "quoteColor", widget: "color", required: false }
               - { label: "Client Name", name: "who", widget: "string" }
+              - { label: "Client Name Color", name: "whoColor", widget: "color", required: false }
 
       - file: "content/contact.json"
         label: "Contact & Hours"
         name: "contact"
         fields:
           - { label: "Address", name: "address", widget: "string" }
+          - { label: "Address Color", name: "addressColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
+          - { label: "Phone Color", name: "phoneColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
           - { label: "Email", name: "email", widget: "string" }
+          - { label: "Email Color", name: "emailColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
+          - { label: "Weekday Hours Color", name: "weekdayHoursColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Weekend Note", name: "weekendNote", widget: "string", hint: "Short version, e.g. 'Varies by stylist'" }
+          - { label: "Weekend Note Color", name: "weekendNoteColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Weekend Detail", name: "weekendDetail", widget: "text", hint: "Full sentence with more detail." }
+          - { label: "Weekend Detail Color", name: "weekendDetailColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
 
       - file: "content/about.json"
         label: "About Page"
@@ -70,6 +80,7 @@ collections:
           - { label: "Pricing note", name: "pricingIntro", widget: "string", hint: "Appears under the page title." }
           - { label: "Pricing Note Color", name: "pricingIntroColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Men's category title", name: "mensTitle", widget: "string" }
+          - { label: "Men's Category Title Color", name: "mensTitleColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - label: "Men's services"
             name: "mensServices"
             widget: "list"
@@ -77,8 +88,11 @@ collections:
             collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
-              - { label: "Description (optional)", name: "desc", widget: "string", required: false }
+              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false }
+              - { label: "Description", name: "desc", widget: "string", required: false }
+              - { label: "Description Color", name: "descColor", widget: "color", required: false }
           - { label: "Women's category title", name: "womensTitle", widget: "string" }
+          - { label: "Women's Category Title Color", name: "womensTitleColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - label: "Women's services"
             name: "womensServices"
             widget: "list"
@@ -86,7 +100,9 @@ collections:
             collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
-              - { label: "Description (optional)", name: "desc", widget: "string", required: false }
+              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false }
+              - { label: "Description", name: "desc", widget: "string", required: false }
+              - { label: "Description Color", name: "descColor", widget: "color", required: false }
           - { label: "Footer note", name: "footerNote", widget: "string", hint: "Include the words 'team page' where you want that link to appear." }
           - { label: "Footer Note Color", name: "footerNoteColor", widget: "color", required: false, hint: "Overrides the theme color for just this text (the 'team page' link keeps its own gold color). Leave blank to use the site-wide color from Colors & Theme." }
 
@@ -123,6 +139,7 @@ collections:
         name: "team"
         fields:
           - { label: "Team page intro text", name: "intro", widget: "string" }
+          - { label: "Team Page Intro Text Color", name: "introColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
           - label: "Stylists"
             name: "stylists"
             widget: "list"
@@ -131,11 +148,16 @@ collections:
             fields:
               - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces — use lowercase letters and hyphens only, e.g. john-smith. This becomes part of the web address for this person's page." }
               - { label: "Name", name: "name", widget: "string" }
+              - { label: "Name Color", name: "nameColor", widget: "color", required: false }
               - { label: "Role", name: "role", widget: "string", default: "Stylist" }
+              - { label: "Role Color", name: "roleColor", widget: "color", required: false }
               - { label: "Specialty", name: "specialty", widget: "string" }
+              - { label: "Specialty Color", name: "specialtyColor", widget: "color", required: false }
               - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
+              - { label: "Phone Color", name: "phoneColor", widget: "color", required: false }
               - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
               - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Bio Color", name: "bioColor", widget: "color", required: false }
               - { label: "Photo", name: "photo", widget: "image", required: false }
               - label: "Links"
                 name: "links"
@@ -145,4 +167,5 @@ collections:
                 hint: "Booking calendar, Instagram, etc."
                 fields:
                   - { label: "Label", name: "label", widget: "string", hint: "e.g. 'Book with me', 'Instagram'" }
+                  - { label: "Label Color", name: "labelColor", widget: "color", required: false }
                   - { label: "URL", name: "url", widget: "string" }

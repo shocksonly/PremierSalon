@@ -30,6 +30,7 @@
         contact: results[1] || {},
         team: (results[2] && results[2].stylists) || [],
         teamIntro: (results[2] && results[2].intro) || "",
+        teamIntroColor: (results[2] && results[2].introColor) || "",
         site: results[3] || {},
         gallery: (results[4] && results[4].photos) || [],
         about: results[5] || {},
@@ -51,6 +52,10 @@
     return prefix + "stylists/profile.html?slug=" + encodeURIComponent(slug);
   }
 
+  function colorStyle(c) {
+    return c ? ' style="color:' + esc(c) + '"' : '';
+  }
+
   function teamCardHtml(s, prefix) {
     var photo = s.photo
       ? '<div class="team-photo"><img src="' + esc(prefix + s.photo) + '" alt="' + esc(s.name) + '"></div>'
@@ -58,10 +63,10 @@
     return (
       '<div class="team-card">' + photo +
       '<div class="team-info">' +
-      '<p class="name">' + esc(s.name) + '</p>' +
-      '<p class="role">' + esc(s.role) + '</p>' +
-      '<p class="specialty">' + esc(s.specialty) + '</p>' +
-      '<a class="phone" href="tel:' + esc(s.phoneTel) + '">' + PHONE_ICON + esc(s.phone) + '</a>' +
+      '<p class="name"' + colorStyle(s.nameColor) + '>' + esc(s.name) + '</p>' +
+      '<p class="role"' + colorStyle(s.roleColor) + '>' + esc(s.role) + '</p>' +
+      '<p class="specialty"' + colorStyle(s.specialtyColor) + '>' + esc(s.specialty) + '</p>' +
+      '<a class="phone" href="tel:' + esc(s.phoneTel) + '"' + colorStyle(s.phoneColor) + '>' + PHONE_ICON + esc(s.phone) + '</a>' +
       '<p class="avail">Contact for hours &amp; availability</p>' +
       '<a class="view-profile" href="' + profileHref(prefix, s.slug) + '">View profile ' + ARROW_ICON + '</a>' +
       '</div></div>'
@@ -103,6 +108,7 @@
     });
     document.querySelectorAll('[data-bind="book-btn-label"]').forEach(function (el) {
       if (site.bookButtonLabel) el.textContent = site.bookButtonLabel;
+      el.style.color = site.bookButtonLabelColor || "";
     });
   }
 
@@ -121,8 +127,8 @@
     el.innerHTML = data.home.testimonials.map(function (t) {
       return (
         '<div class="testimonial-card"><p class="stars">★★★★★</p>' +
-        '<p class="quote">"' + esc(t.quote) + '"</p>' +
-        '<p class="who">— ' + esc(t.who) + '</p></div>'
+        '<p class="quote"' + colorStyle(t.quoteColor) + '>"' + esc(t.quote) + '"</p>' +
+        '<p class="who"' + colorStyle(t.whoColor) + '>— ' + esc(t.who) + '</p></div>'
       );
     }).join("");
   }
@@ -132,20 +138,23 @@
     if (!line) return;
     ["about-specialty-line", "services-specialty-line"].forEach(function (id) {
       var el = document.getElementById(id);
-      if (el) el.textContent = line;
+      if (el) {
+        el.textContent = line;
+        el.style.color = data.home.specialtyLineColor || "";
+      }
     });
   }
 
   function renderContact(data) {
     var c = data.contact || {};
-    document.querySelectorAll("[data-bind='address']").forEach(function (el) { el.textContent = c.address || ""; });
-    document.querySelectorAll("[data-bind='phone-text']").forEach(function (el) { el.textContent = c.phone || ""; });
+    document.querySelectorAll("[data-bind='address']").forEach(function (el) { el.textContent = c.address || ""; el.style.color = c.addressColor || ""; });
+    document.querySelectorAll("[data-bind='phone-text']").forEach(function (el) { el.textContent = c.phone || ""; el.style.color = c.phoneColor || ""; });
     document.querySelectorAll("[data-bind='phone-href']").forEach(function (el) { el.setAttribute("href", "tel:" + (c.phoneTel || "")); });
-    document.querySelectorAll("[data-bind='email-text']").forEach(function (el) { el.textContent = c.email || ""; });
+    document.querySelectorAll("[data-bind='email-text']").forEach(function (el) { el.textContent = c.email || ""; el.style.color = c.emailColor || ""; });
     document.querySelectorAll("[data-bind='email-href']").forEach(function (el) { el.setAttribute("href", "mailto:" + (c.email || "")); });
-    document.querySelectorAll("[data-bind='weekday-hours']").forEach(function (el) { el.textContent = c.weekdayHours || ""; });
-    document.querySelectorAll("[data-bind='weekend-note']").forEach(function (el) { el.textContent = c.weekendNote || ""; });
-    document.querySelectorAll("[data-bind='weekend-detail']").forEach(function (el) { el.textContent = c.weekendDetail || ""; });
+    document.querySelectorAll("[data-bind='weekday-hours']").forEach(function (el) { el.textContent = c.weekdayHours || ""; el.style.color = c.weekdayHoursColor || ""; });
+    document.querySelectorAll("[data-bind='weekend-note']").forEach(function (el) { el.textContent = c.weekendNote || ""; el.style.color = c.weekendNoteColor || ""; });
+    document.querySelectorAll("[data-bind='weekend-detail']").forEach(function (el) { el.textContent = c.weekendDetail || ""; el.style.color = c.weekendDetailColor || ""; });
     document.querySelectorAll("[data-bind='nav-book-href']").forEach(function (el) {
       // leave as-is; nav books to team page, not phone
     });
@@ -193,8 +202,14 @@
       if (s.pricingIntro) el.textContent = s.pricingIntro;
       el.style.color = s.pricingIntroColor || "";
     });
-    document.querySelectorAll('[data-bind="services-mens-title"]').forEach(function (el) { if (s.mensTitle) el.textContent = s.mensTitle; });
-    document.querySelectorAll('[data-bind="services-womens-title"]').forEach(function (el) { if (s.womensTitle) el.textContent = s.womensTitle; });
+    document.querySelectorAll('[data-bind="services-mens-title"]').forEach(function (el) {
+      if (s.mensTitle) el.textContent = s.mensTitle;
+      el.style.color = s.mensTitleColor || "";
+    });
+    document.querySelectorAll('[data-bind="services-womens-title"]').forEach(function (el) {
+      if (s.womensTitle) el.textContent = s.womensTitle;
+      el.style.color = s.womensTitleColor || "";
+    });
     document.querySelectorAll('[data-bind="services-footer-note"]').forEach(function (el) {
       if (s.footerNote) {
         el.innerHTML = "";
@@ -214,8 +229,8 @@
     function renderList(mountName, items) {
       document.querySelectorAll('[data-mount="' + mountName + '"]').forEach(function (el) {
         el.innerHTML = (items || []).map(function (item) {
-          var desc = item.desc ? '<span class="desc">' + esc(item.desc) + '</span>' : '';
-          return '<li>' + esc(item.name) + desc + '</li>';
+          var desc = item.desc ? '<span class="desc"' + colorStyle(item.descColor) + '>' + esc(item.desc) + '</span>' : '';
+          return '<li><span class="name"' + colorStyle(item.nameColor) + '>' + esc(item.name) + '</span>' + desc + '</li>';
         }).join("");
       });
     }
@@ -226,6 +241,7 @@
   function renderTeamIntro(data) {
     document.querySelectorAll('[data-bind="team-intro-text"]').forEach(function (el) {
       if (data.teamIntro) el.textContent = data.teamIntro;
+      el.style.color = data.teamIntroColor || "";
     });
   }
 
@@ -254,16 +270,25 @@
       ? '<img src="../' + esc(s.photo) + '" alt="' + esc(s.name) + '">'
       : USER_ICON;
     photoEl.className = s.photo ? "profile-photo" : "profile-photo placeholder";
-    document.getElementById("profile-role").textContent = s.role;
-    document.getElementById("profile-name").textContent = s.name;
-    document.getElementById("profile-specialty").textContent = s.specialty;
-    document.getElementById("profile-bio").textContent = s.bio;
+    var roleEl = document.getElementById("profile-role");
+    roleEl.textContent = s.role;
+    roleEl.style.color = s.roleColor || "";
+    var nameEl = document.getElementById("profile-name");
+    nameEl.textContent = s.name;
+    nameEl.style.color = s.nameColor || "";
+    var specialtyEl = document.getElementById("profile-specialty");
+    specialtyEl.textContent = s.specialty;
+    specialtyEl.style.color = s.specialtyColor || "";
+    var bioEl = document.getElementById("profile-bio");
+    bioEl.textContent = s.bio;
+    bioEl.style.color = s.bioColor || "";
     var phoneLink = document.getElementById("profile-phone");
     phoneLink.href = "tel:" + s.phoneTel;
     phoneLink.innerHTML = PHONE_ICON + esc(s.phone);
+    phoneLink.style.color = s.phoneColor || "";
     var linksEl = document.getElementById("profile-links");
     linksEl.innerHTML = (s.links || []).filter(function (l) { return l.url && l.url !== "#"; }).map(function (l) {
-      return '<a class="link-pill" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + linkIcon(l.label) + esc(l.label) + '</a>';
+      return '<a class="link-pill" href="' + esc(l.url) + '" target="_blank" rel="noopener"' + colorStyle(l.labelColor) + '>' + linkIcon(l.label) + esc(l.label) + '</a>';
     }).join("");
   }
 

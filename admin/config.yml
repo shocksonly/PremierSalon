@@ -15,7 +15,7 @@ collections:
         fields:
           - { label: "Logo", name: "logo", widget: "image", hint: "Square or round logo works best. Shows in the header on every page." }
           - { label: "\"Book Now\" button text", name: "bookButtonLabel", widget: "string", hint: "Used in the header on every page." }
-          - { label: "\"Book Now\" Button Text Color", name: "bookButtonLabelColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "\"Book Now\" Button Text Color", name: "bookButtonLabelColor", widget: "color", required: false, hint: "This button appears in two different styles (outlined and solid), each needing a different text color for contrast, so it has no single current color to start from. Leave blank to keep following the theme automatically for both." }
 
       - file: "content/home.json"
         label: "Home Page"
@@ -23,14 +23,14 @@ collections:
         fields:
           - { label: "Hero Photo", name: "heroPhoto", widget: "image", hint: "The big photo at the top of the home page. Tall photos (portrait) work best." }
           - { label: "Hero Title", name: "heroTitle", widget: "string", hint: "The big headline over the hero photo. Keep it short." }
-          - { label: "Hero Title Color", name: "heroTitleColor", widget: "color", required: false, hint: "Overrides the theme color for just this headline. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Hero Title Color", name: "heroTitleColor", widget: "color", required: false, default: "#FAF9F6", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text", hint: "A sentence or two under the headline." }
-          - { label: "Hero Subtitle Color", name: "heroSubtitleColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Hero Subtitle Color", name: "heroSubtitleColor", widget: "color", required: false, default: "#FAF9F699", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Hero primary button text", name: "heroPrimaryLabel", widget: "string" }
           - { label: "Hero secondary button text", name: "heroSecondaryLabel", widget: "string" }
           - { label: "Product/Shop Photo (below reviews)", name: "shelfPhoto", widget: "image" }
           - { label: "Specialty Line", name: "specialtyLine", widget: "string", hint: "Shown on the Home, About, and Services pages." }
-          - { label: "Specialty Line Color", name: "specialtyLineColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Specialty Line Color", name: "specialtyLineColor", widget: "color", required: false, hint: "This line is styled differently on the About page (a highlighted callout) than on the Services page (a plain subtitle), so it has no single current color to start from. Leave blank to keep following the theme automatically in both places." }
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
@@ -38,49 +38,49 @@ collections:
             collapsed: true
             fields:
               - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Quote Color", name: "quoteColor", widget: "color", required: false }
+              - { label: "Quote Color", name: "quoteColor", widget: "color", required: false, default: "#121110" }
               - { label: "Client Name", name: "who", widget: "string" }
-              - { label: "Client Name Color", name: "whoColor", widget: "color", required: false }
+              - { label: "Client Name Color", name: "whoColor", widget: "color", required: false, default: "#6E695F" }
 
       - file: "content/contact.json"
         label: "Contact & Hours"
         name: "contact"
         fields:
           - { label: "Address", name: "address", widget: "string" }
-          - { label: "Address Color", name: "addressColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Address Color", name: "addressColor", widget: "color", required: false, hint: "This text appears in a bright info card and again, dimmed, in the page footer — those two spots currently use different colors, so there's no single current color to start from. Leave blank to keep following the theme automatically in both places." }
           - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
-          - { label: "Phone Color", name: "phoneColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Phone Color", name: "phoneColor", widget: "color", required: false, hint: "This text appears in a bright info card and again, dimmed, in the page footer — those two spots currently use different colors, so there's no single current color to start from. Leave blank to keep following the theme automatically in both places." }
           - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Email Color", name: "emailColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Email Color", name: "emailColor", widget: "color", required: false, hint: "This text appears in a bright info card and again, dimmed, in the page footer — those two spots currently use different colors, so there's no single current color to start from. Leave blank to keep following the theme automatically in both places." }
           - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
-          - { label: "Weekday Hours Color", name: "weekdayHoursColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Weekday Hours Color", name: "weekdayHoursColor", widget: "color", required: false, default: "#FAF9F6", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Weekend Note", name: "weekendNote", widget: "string", hint: "Short version, e.g. 'Varies by stylist'" }
-          - { label: "Weekend Note Color", name: "weekendNoteColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Weekend Note Color", name: "weekendNoteColor", widget: "color", required: false, default: "#FAF9F6", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Weekend Detail", name: "weekendDetail", widget: "text", hint: "Full sentence with more detail." }
-          - { label: "Weekend Detail Color", name: "weekendDetailColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Weekend Detail Color", name: "weekendDetailColor", widget: "color", required: false, default: "#FAF9F6AD", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
 
       - file: "content/about.json"
         label: "About Page"
         name: "about"
         fields:
           - { label: "Subheading", name: "intro", widget: "string", hint: "Appears under the page title." }
-          - { label: "Subheading Color", name: "introColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Subheading Color", name: "introColor", widget: "color", required: false, default: "#FAF9F69E", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "First paragraph", name: "paragraph1", widget: "text" }
-          - { label: "First Paragraph Color", name: "paragraph1Color", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "First Paragraph Color", name: "paragraph1Color", widget: "color", required: false, default: "#6E695F", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Second paragraph", name: "paragraph2", widget: "text" }
-          - { label: "Second Paragraph Color", name: "paragraph2Color", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Second Paragraph Color", name: "paragraph2Color", widget: "color", required: false, default: "#6E695F", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Closing paragraph", name: "closing", widget: "text", hint: "Include the words 'team page' where you want that link to appear." }
-          - { label: "Closing Paragraph Color", name: "closingColor", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph (the 'team page' link keeps its own gold color). Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Closing Paragraph Color", name: "closingColor", widget: "color", required: false, default: "#6E695F", hint: "Starts matching the site-wide theme color (the 'team page' link keeps its own gold color). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
 
       - file: "content/services.json"
         label: "Services Page"
         name: "services"
         fields:
           - { label: "Pricing note", name: "pricingIntro", widget: "string", hint: "Appears under the page title." }
-          - { label: "Pricing Note Color", name: "pricingIntroColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Pricing Note Color", name: "pricingIntroColor", widget: "color", required: false, default: "#FAF9F69E", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - { label: "Men's category title", name: "mensTitle", widget: "string" }
-          - { label: "Men's Category Title Color", name: "mensTitleColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Men's Category Title Color", name: "mensTitleColor", widget: "color", required: false, default: "#121110", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - label: "Men's services"
             name: "mensServices"
             widget: "list"
@@ -88,11 +88,11 @@ collections:
             collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
-              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false }
+              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false, default: "#121110" }
               - { label: "Description", name: "desc", widget: "string", required: false }
-              - { label: "Description Color", name: "descColor", widget: "color", required: false }
+              - { label: "Description Color", name: "descColor", widget: "color", required: false, default: "#6E695F" }
           - { label: "Women's category title", name: "womensTitle", widget: "string" }
-          - { label: "Women's Category Title Color", name: "womensTitleColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Women's Category Title Color", name: "womensTitleColor", widget: "color", required: false, default: "#121110", hint: "Starts matching the site-wide theme color. Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - label: "Women's services"
             name: "womensServices"
             widget: "list"
@@ -100,11 +100,11 @@ collections:
             collapsed: true
             fields:
               - { label: "Service name", name: "name", widget: "string" }
-              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false }
+              - { label: "Service Name Color", name: "nameColor", widget: "color", required: false, default: "#121110" }
               - { label: "Description", name: "desc", widget: "string", required: false }
-              - { label: "Description Color", name: "descColor", widget: "color", required: false }
+              - { label: "Description Color", name: "descColor", widget: "color", required: false, default: "#6E695F" }
           - { label: "Footer note", name: "footerNote", widget: "string", hint: "Include the words 'team page' where you want that link to appear." }
-          - { label: "Footer Note Color", name: "footerNoteColor", widget: "color", required: false, hint: "Overrides the theme color for just this text (the 'team page' link keeps its own gold color). Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Footer Note Color", name: "footerNoteColor", widget: "color", required: false, default: "#6E695F", hint: "Starts matching the site-wide theme color (the 'team page' link keeps its own gold color). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
 
       - file: "content/theme.json"
         label: "Colors & Theme"
@@ -139,7 +139,7 @@ collections:
         name: "team"
         fields:
           - { label: "Team page intro text", name: "intro", widget: "string" }
-          - { label: "Team Page Intro Text Color", name: "introColor", widget: "color", required: false, hint: "Leave blank to use the site-wide color from Colors & Theme." }
+          - { label: "Team Page Intro Text Color", name: "introColor", widget: "color", required: false, default: "#FAF9F69E", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
           - label: "Stylists"
             name: "stylists"
             widget: "list"
@@ -148,16 +148,16 @@ collections:
             fields:
               - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces — use lowercase letters and hyphens only, e.g. john-smith. This becomes part of the web address for this person's page." }
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Name Color", name: "nameColor", widget: "color", required: false }
+              - { label: "Name Color", name: "nameColor", widget: "color", required: false, default: "#121110" }
               - { label: "Role", name: "role", widget: "string", default: "Stylist" }
-              - { label: "Role Color", name: "roleColor", widget: "color", required: false }
+              - { label: "Role Color", name: "roleColor", widget: "color", required: false, default: "#C9A24C" }
               - { label: "Specialty", name: "specialty", widget: "string" }
-              - { label: "Specialty Color", name: "specialtyColor", widget: "color", required: false }
+              - { label: "Specialty Color", name: "specialtyColor", widget: "color", required: false, default: "#6E695F" }
               - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the number looks on the page, e.g. (913) 555-0142" }
-              - { label: "Phone Color", name: "phoneColor", widget: "color", required: false }
+              - { label: "Phone Color", name: "phoneColor", widget: "color", required: false, hint: "This appears on the team grid card and again, as bold text on a solid gold button, on the stylist's own page — those two spots currently use different colors, so there's no single current color to start from. Leave blank to keep following the theme automatically in both places." }
               - { label: "Phone (dial format)", name: "phoneTel", widget: "string", hint: "Used when someone taps the number to call. No spaces or punctuation, e.g. +19135550142" }
               - { label: "Bio", name: "bio", widget: "text" }
-              - { label: "Bio Color", name: "bioColor", widget: "color", required: false }
+              - { label: "Bio Color", name: "bioColor", widget: "color", required: false, default: "#6E695F" }
               - { label: "Photo", name: "photo", widget: "image", required: false }
               - label: "Links"
                 name: "links"
@@ -167,5 +167,5 @@ collections:
                 hint: "Booking calendar, Instagram, etc."
                 fields:
                   - { label: "Label", name: "label", widget: "string", hint: "e.g. 'Book with me', 'Instagram'" }
-                  - { label: "Label Color", name: "labelColor", widget: "color", required: false }
+                  - { label: "Label Color", name: "labelColor", widget: "color", required: false, default: "#121110" }
                   - { label: "URL", name: "url", widget: "string" }

@@ -1,55 +1,68 @@
 {
   "pricingIntro": "Pricing is set by each stylist — contact them directly for exact rates.",
+  "pricingIntroColor": "#FAF9F69E",
   "mensTitle": "Men's",
+  "mensTitleColor": "#121110",
   "mensServices": [
     {
       "name": "Fades",
       "desc": "Skin, taper, or classic — clipper work done clean",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Classic haircuts",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Beard trims & line-ups",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Hot towel shaves",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Kids' cuts",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     }
   ],
   "womensTitle": "Women's",
+  "womensTitleColor": "#121110",
   "womensServices": [
     {
       "name": "Cuts & styling",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Color",
       "desc": "Full color, root touch-ups, highlights",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Blowouts",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     },
     {
       "name": "Treatments & consultations",
       "desc": "",
-      "nameColor": "#ffffff"
+      "nameColor": "#ffffff",
+      "descColor": "#6E695F"
     }
   ],
-  "footerNote": "Exact pricing varies by stylist — see the team page to reach out directly."
+  "footerNote": "Exact pricing varies by stylist — see the team page to reach out directly.",
+  "footerNoteColor": "#6E695F"
 }

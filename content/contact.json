@@ -4,6 +4,9 @@
   "phoneTel": "+19132065337",
   "email": "hello@premiersalonks.com",
   "weekdayHours": "8:00am – 7:00pm",
+  "weekdayHoursColor": "#FAF9F6",
   "weekendNote": "Varies by stylist",
-  "weekendDetail": "Contact a stylist directly, listed above, for weekend availability."
+  "weekendNoteColor": "#FAF9F6",
+  "weekendDetail": "Contact a stylist directly, listed above, for weekend availability.",
+  "weekendDetailColor": "#FAF9F6AD"
 }

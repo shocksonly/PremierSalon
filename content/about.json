@@ -1,6 +1,10 @@
 {
   "intro": "The story behind Premier Salon and what you can expect in the chair.",
+  "introColor": "#FAF9F69E",
   "paragraph1": "Premier Salon has built its name the old way — one good cut at a time, and a lot of people coming back. We keep the shop small on purpose, so every client gets full attention, not a rushed ten minutes between appointments.",
+  "paragraph1Color": "#6E695F",
   "paragraph2": "If you're new to Bonner Springs or just haven't found your regular spot yet, come sit down. We'll figure out what works for you.",
-  "closing": "Every stylist at Premier Salon runs their own book and brings their own focus to the chair — see the team page for who specializes in what."
+  "paragraph2Color": "#6E695F",
+  "closing": "Every stylist at Premier Salon runs their own book and brings their own focus to the chair — see the team page for who specializes in what.",
+  "closingColor": "#6E695F"
 }

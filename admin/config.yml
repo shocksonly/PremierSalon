@@ -24,7 +24,9 @@ collections:
         fields:
           - { label: "Hero Photo", name: "heroPhoto", widget: "image", hint: "The big photo at the top of the home page. Tall photos (portrait) work best." }
           - { label: "Hero Title", name: "heroTitle", widget: "string", hint: "The big headline over the hero photo. Keep it short." }
+          - { label: "Hero Title Color", name: "heroTitleColor", widget: "color", required: false, hint: "Overrides the theme color for just this headline. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text", hint: "A sentence or two under the headline." }
+          - { label: "Hero Subtitle Color", name: "heroSubtitleColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Hero primary button text", name: "heroPrimaryLabel", widget: "string" }
           - { label: "Hero secondary button text", name: "heroSecondaryLabel", widget: "string" }
           - { label: "Product/Shop Photo (below reviews)", name: "shelfPhoto", widget: "image" }
@@ -55,15 +57,20 @@ collections:
         name: "about"
         fields:
           - { label: "Subheading", name: "intro", widget: "string", hint: "Appears under the page title." }
+          - { label: "Subheading Color", name: "introColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "First paragraph", name: "paragraph1", widget: "text" }
+          - { label: "First Paragraph Color", name: "paragraph1Color", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Second paragraph", name: "paragraph2", widget: "text" }
+          - { label: "Second Paragraph Color", name: "paragraph2Color", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Closing paragraph", name: "closing", widget: "text", hint: "Include the words 'team page' where you want that link to appear." }
+          - { label: "Closing Paragraph Color", name: "closingColor", widget: "color", required: false, hint: "Overrides the theme color for just this paragraph (the 'team page' link keeps its own gold color). Leave blank to use the site-wide color from Colors & Theme." }
 
       - file: "content/services.json"
         label: "Services Page"
         name: "services"
         fields:
           - { label: "Pricing note", name: "pricingIntro", widget: "string", hint: "Appears under the page title." }
+          - { label: "Pricing Note Color", name: "pricingIntroColor", widget: "color", required: false, hint: "Overrides the theme color for just this text. Leave blank to use the site-wide color from Colors & Theme." }
           - { label: "Men's category title", name: "mensTitle", widget: "string" }
           - label: "Men's services"
             name: "mensServices"
@@ -83,6 +90,7 @@ collections:
               - { label: "Service name", name: "name", widget: "string" }
               - { label: "Description (optional)", name: "desc", widget: "string", required: false }
           - { label: "Footer note", name: "footerNote", widget: "string", hint: "Include the words 'team page' where you want that link to appear." }
+          - { label: "Footer Note Color", name: "footerNoteColor", widget: "color", required: false, hint: "Overrides the theme color for just this text (the 'team page' link keeps its own gold color). Leave blank to use the site-wide color from Colors & Theme." }
 
       - file: "content/theme.json"
         label: "Colors & Theme"

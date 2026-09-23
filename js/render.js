@@ -79,7 +79,9 @@
     var t = document.getElementById("hero-title");
     var s = document.getElementById("hero-subtitle");
     if (t && data.home.heroTitle) t.textContent = data.home.heroTitle;
+    if (t) t.style.color = data.home.heroTitleColor || "";
     if (s && data.home.heroSubtitle) s.textContent = data.home.heroSubtitle;
+    if (s) s.style.color = data.home.heroSubtitleColor || "";
     document.querySelectorAll('[data-bind="hero-photo"]').forEach(function (el) {
       if (data.home.heroPhoto) el.setAttribute("src", PREFIX + data.home.heroPhoto);
     });
@@ -155,9 +157,18 @@
 
   function renderAboutPage(data) {
     var a = data.about || {};
-    document.querySelectorAll('[data-bind="about-intro"]').forEach(function (el) { if (a.intro) el.textContent = a.intro; });
-    document.querySelectorAll('[data-bind="about-paragraph-1"]').forEach(function (el) { if (a.paragraph1) el.textContent = a.paragraph1; });
-    document.querySelectorAll('[data-bind="about-paragraph-2"]').forEach(function (el) { if (a.paragraph2) el.textContent = a.paragraph2; });
+    document.querySelectorAll('[data-bind="about-intro"]').forEach(function (el) {
+      if (a.intro) el.textContent = a.intro;
+      el.style.color = a.introColor || "";
+    });
+    document.querySelectorAll('[data-bind="about-paragraph-1"]').forEach(function (el) {
+      if (a.paragraph1) el.textContent = a.paragraph1;
+      el.style.color = a.paragraph1Color || "";
+    });
+    document.querySelectorAll('[data-bind="about-paragraph-2"]').forEach(function (el) {
+      if (a.paragraph2) el.textContent = a.paragraph2;
+      el.style.color = a.paragraph2Color || "";
+    });
     document.querySelectorAll('[data-bind="about-closing"]').forEach(function (el) {
       if (!a.closing) return;
       el.innerHTML = "";
@@ -172,12 +183,16 @@
         el.appendChild(link);
         el.appendChild(document.createTextNode(parts[1]));
       }
+      el.style.color = a.closingColor || "";
     });
   }
 
   function renderServicesPage(data) {
     var s = data.services || {};
-    document.querySelectorAll('[data-bind="services-pricing-intro"]').forEach(function (el) { if (s.pricingIntro) el.textContent = s.pricingIntro; });
+    document.querySelectorAll('[data-bind="services-pricing-intro"]').forEach(function (el) {
+      if (s.pricingIntro) el.textContent = s.pricingIntro;
+      el.style.color = s.pricingIntroColor || "";
+    });
     document.querySelectorAll('[data-bind="services-mens-title"]').forEach(function (el) { if (s.mensTitle) el.textContent = s.mensTitle; });
     document.querySelectorAll('[data-bind="services-womens-title"]').forEach(function (el) { if (s.womensTitle) el.textContent = s.womensTitle; });
     document.querySelectorAll('[data-bind="services-footer-note"]').forEach(function (el) {
@@ -194,6 +209,7 @@
           el.appendChild(document.createTextNode(parts[1]));
         }
       }
+      el.style.color = s.footerNoteColor || "";
     });
     function renderList(mountName, items) {
       document.querySelectorAll('[data-mount="' + mountName + '"]').forEach(function (el) {

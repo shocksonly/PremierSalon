@@ -1,82 +1,84 @@
 {
   "stylists": [
     {
+      "specialtyColor": "#ffffff",
+      "bio": "Bio goes here — background, how long they've been cutting hair, and what clients can expect in the chair.",
+      "name": "Name here",
       "slug": "owner",
-      "name": "Name here",
-      "nameColor": "#121110",
-      "role": "Owner & Stylist",
       "roleColor": "#C9A24C",
-      "specialty": "Specializes in — fades, color, and classic cuts",
-      "specialtyColor": "#6E695F",
-      "phone": "(913) 555-0142",
       "phoneTel": "+19135550142",
-      "bio": "Bio goes here — background, how long they've been cutting hair, and what clients can expect in the chair.",
-      "bioColor": "#6E695F",
+      "phone": "(913) 555-0142",
       "photo": "",
+      "phoneColor": "#ffffff",
+      "role": "Owner & Stylist",
+      "nameColor": "#ffffff",
       "links": [
         {
           "label": "Book with me",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         },
         {
           "label": "Instagram",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         }
-      ]
+      ],
+      "bioColor": "#ffffff",
+      "specialty": "Specializes in — fades, color, and classic cuts"
     },
     {
+      "specialtyColor": "#ffffff",
+      "bio": "Bio goes here — background, how long they've been cutting hair, and what clients can expect in the chair.",
+      "name": "Name here",
       "slug": "stylist-2",
-      "name": "Name here",
-      "nameColor": "#121110",
-      "role": "Stylist",
       "roleColor": "#C9A24C",
-      "specialty": "Specializes in — add their specialty here",
-      "specialtyColor": "#6E695F",
-      "phone": "(913) 555-0000",
       "phoneTel": "+19135550000",
-      "bio": "Bio goes here — background, how long they've been cutting hair, and what clients can expect in the chair.",
-      "bioColor": "#6E695F",
+      "phone": "(913) 555-0000",
       "photo": "",
+      "phoneColor": "#ffffff",
+      "role": "Stylist",
+      "nameColor": "#ffffff",
       "links": [
         {
           "label": "Book with me",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         },
         {
           "label": "Instagram",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         }
-      ]
+      ],
+      "bioColor": "#ffffff",
+      "specialty": "Specializes in — add their specialty here"
     },
     {
-      "slug": "stylist-3",
-      "name": "Name here",
-      "nameColor": "#121110",
-      "role": "Stylist",
-      "roleColor": "#C9A24C",
-      "specialty": "Specializes in — add their specialty here",
-      "specialtyColor": "#6E695F",
-      "phone": "(913) 555-0000",
-      "phoneTel": "+19135550000",
+      "specialtyColor": "#ffffff",
       "bio": "Bio goes here — background, how long they've been cutting hair, and what clients can expect in the chair.",
-      "bioColor": "#6E695F",
+      "name": "Name here",
+      "slug": "stylist-3",
+      "roleColor": "#C9A24C",
+      "phoneTel": "+19135550000",
+      "phone": "(913) 555-0000",
       "photo": "",
+      "role": "Stylist",
+      "nameColor": "#ffffff",
       "links": [
         {
           "label": "Book with me",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         },
         {
           "label": "Instagram",
-          "labelColor": "#121110",
+          "labelColor": "#ffffff",
           "url": "#"
         }
-      ]
+      ],
+      "bioColor": "#ffffff",
+      "specialty": "Specializes in — add their specialty here"
     }
   ],
   "intro": "Everyone at Premier Salon books their own clients directly — reach out to whoever you'd like to sit with.",

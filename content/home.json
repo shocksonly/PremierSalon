@@ -1,22 +1,22 @@
 {
   "heroPhoto": "images/hero.jpg",
   "shelfPhoto": "images/shelf.jpg",
-  "heroTitle": "Where the chair, the light, and the finish all feel deliberate.",
+  "heroTitle": "Where the chair, the light, and the finish all feel deliberate.ssdsss",
   "heroSubtitle": "Premier Salon is a modern chair on the Kansas side of the river, specializing in professional men's fades and women's cuts & color. Walk-ins are always welcome, or call ahead to book with someone specific.",
   "heroPrimaryLabel": "Book Now",
   "heroSecondaryLabel": "View services",
   "specialtyLine": "Specializing in professional men's fades and women's cuts & color.",
   "testimonials": [
     {
-      "quote": "Placeholder review \u2014 swap in a real one once you've got a few to feature.",
+      "quote": "Placeholder review — swap in a real one once you've got a few to feature.",
       "who": "Client name"
     },
     {
-      "quote": "Placeholder review \u2014 swap in a real one once you've got a few to feature.",
+      "quote": "Placeholder review — swap in a real one once you've got a few to feature.",
       "who": "Client name"
     },
     {
-      "quote": "Placeholder review \u2014 swap in a real one once you've got a few to feature.",
+      "quote": "Placeholder review — swap in a real one once you've got a few to feature.",
       "who": "Client name"
     }
   ]

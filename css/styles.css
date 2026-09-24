@@ -108,7 +108,7 @@ nav.links a:hover, nav.links a.active { color: var(--gold); }
 .btn-primary:hover { background: var(--gold-light); }
 .btn-secondary { border: 1px solid color-mix(in srgb, var(--light-text) 30%, transparent); color: var(--light-text); }
 .btn-secondary:hover { border-color: var(--light-text); }
-.hero-visual { position: relative; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden; border: 1px solid rgba(201,162,76,0.3); }
+.hero-visual { position: relative; aspect-ratio: 4 / 3; border-radius: 3px; overflow: hidden; border: 1px solid rgba(201,162,76,0.3); }
 .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 800px) { .hero { grid-template-columns: 1fr; padding: 44px 20px 40px; gap: 30px; } .hero h1 { font-size: 28px; } }
 

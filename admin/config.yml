@@ -139,7 +139,7 @@ collections:
         name: "team"
         fields:
           - { label: "Team page intro text", name: "intro", widget: "string" }
-          - { label: "Team Page Intro Text Color", name: "introColor", widget: "color", required: false, default: "#FAF9F69E", enableAlpha: true, hint: "Starts matching the site-wide theme color (at its current reduced opacity). Change it for a one-off color just here, or clear it to follow the theme automatically again." }
+          - { label: "Team Page Intro Text Color", name: "introColor", widget: "color", required: false, hint: "This text appears on the Home page (on a light background) and the Team page (on a dark banner), which need different colors for readability, so it has no single color to start from. Leave blank to keep following the theme automatically in both places." }
           - label: "Stylists"
             name: "stylists"
             widget: "list"
